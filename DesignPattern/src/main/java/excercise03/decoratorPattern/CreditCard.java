@@ -14,6 +14,7 @@ package excercise03.decoratorPattern;
  * @nameProject: Project_Architectural_Software
  */
 
+<<<<<<< HEAD
 public class CreditCard extends Paypal.PaymentDecorator {
     public CreditCard(Payment payment) {
         super(payment);
@@ -25,3 +26,16 @@ public class CreditCard extends Paypal.PaymentDecorator {
         System.out.println("Pay by credit card");
     }
 }
+=======
+//public class CreditCard extends PaymentDecorator {
+//    public CreditCard(Payment payment) {
+//        super(payment);
+//    }
+//
+//    @Override
+//    public void pay(int amount) {
+//        super.pay(amount);
+//        System.out.println("Pay by credit card");
+//    }
+//}
+>>>>>>> 9ed8d11 (desginpatter_day2)
