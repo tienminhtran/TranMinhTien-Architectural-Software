@@ -1,4 +1,4 @@
-Private property of Exodus: 20564@Admin-PC
+Private property of Exodus: 7452@Admin-PC
 
 jetbrains.exodus.io.LockingManager.lock(LockingManager.kt:88)
 jetbrains.exodus.io.LockingManager.lock(LockingManager.kt:39)
@@ -89,13 +89,14 @@ com.intellij.openapi.progress.impl.PlatformTaskSupport$runWithModalProgressBlock
 com.intellij.openapi.progress.ContextKt.prepareThreadContext(context.kt:86)
 com.intellij.openapi.progress.impl.PlatformTaskSupport.runWithModalProgressBlockingInternal(PlatformTaskSupport.kt:118)
 com.intellij.platform.ide.progress.TasksKt.runWithModalProgressBlocking(tasks.kt:173)
-com.intellij.openapi.progress.TasksKt.runBlockingModalWithRawProgressReporter(tasks.kt:256)
-com.intellij.openapi.progress.TasksKt.runBlockingModalWithRawProgressReporter$default(tasks.kt:250)
-com.intellij.ide.impl.NewProjectUtil.doCreate(NewProjectUtil.kt:192)
-com.intellij.ide.impl.NewProjectUtil.createFromWizard(NewProjectUtil.kt:84)
-com.intellij.ide.impl.NewProjectUtil.createFromWizard$default(NewProjectUtil.kt:82)
-com.intellij.ide.impl.NewProjectUtil.createNewProject(NewProjectUtil.kt:69)
-com.intellij.ide.actions.NewProjectAction.actionPerformed(NewProjectAction.java:24)
+com.intellij.platform.ide.progress.TasksKt.runWithModalProgressBlocking$default(tasks.kt:167)
+com.intellij.ide.actions.OpenFileAction$actionPerformed$1.invoke(OpenFileAction.kt:85)
+com.intellij.ide.actions.OpenFileAction$actionPerformed$1.invoke(OpenFileAction.kt:76)
+com.intellij.ide.actions.OpenFileAction.actionPerformed$lambda$0(OpenFileAction.kt:76)
+com.intellij.openapi.fileChooser.ex.FileChooserDialogImpl.choose(FileChooserDialogImpl.java:140)
+com.intellij.openapi.fileChooser.FileChooser.chooseFiles(FileChooser.java:100)
+com.intellij.openapi.fileChooser.FileChooser.chooseFiles(FileChooser.java:78)
+com.intellij.ide.actions.OpenFileAction.actionPerformed(OpenFileAction.kt:76)
 com.intellij.openapi.actionSystem.ex.ActionUtil.doPerformActionOrShowPopup(ActionUtil.java:344)
 com.intellij.openapi.actionSystem.ex.ActionUtil.lambda$performActionDumbAwareWithCallbacks$4(ActionUtil.java:318)
 com.intellij.openapi.actionSystem.ex.ActionUtil.performDumbAwareWithCallbacks(ActionUtil.java:381)
