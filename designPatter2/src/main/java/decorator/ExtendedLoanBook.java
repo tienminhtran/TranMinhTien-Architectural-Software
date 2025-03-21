@@ -7,6 +7,7 @@ package decorator;/*
  */
 
 import factory.Book;
+import factory.Book;
 
 public class ExtendedLoanBook extends BookDecorator {
     public ExtendedLoanBook(Book book) {
@@ -14,8 +15,7 @@ public class ExtendedLoanBook extends BookDecorator {
     }
 
     @Override
-    public void displayInfo() {
-        decoratedBook.displayInfo();
-        System.out.println("Extended loan available");
+    public void borrow() {
+        System.out.println("Mượn sách với thời gian gia hạn: " + book.title);
     }
 }

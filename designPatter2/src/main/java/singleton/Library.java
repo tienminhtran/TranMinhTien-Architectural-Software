@@ -6,15 +6,17 @@ package singleton;/*
  * @nameProject: Project_Architectural_Software
  */
 
+import factory.Book;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Library {
     private static Library instance;
-    private List<Book> books;
+    private List<Book> books = new ArrayList<>();
 
-    private Library() {
-        books = new ArrayList<>();
-    }
+    private Library() {}
 
-    public static synchronized Library getInstance() {
+    public static Library getInstance() {
         if (instance == null) {
             instance = new Library();
         }

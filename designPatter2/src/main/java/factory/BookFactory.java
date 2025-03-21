@@ -6,12 +6,16 @@ package factory;/*
  * @nameProject: Project_Architectural_Software
  */
 
+
 public class BookFactory {
-    public static Book createBook(String type, String title, String author) {
+    public static Book createBook(String type, String title, String author, String genre) {
         switch (type.toLowerCase()) {
-            case "paper": return new PaperBook(title, author);
-            case "ebook": return new Ebook(title, author);
-            default: throw new IllegalArgumentException("Unknown book type");
+            case "physical":
+                return new PhysicalBook(title, author, genre);
+            case "ebook":
+                return new EBook(title, author, genre);
+            default:
+                throw new IllegalArgumentException("Unknown book type: " + type);
         }
     }
 }

@@ -9,7 +9,6 @@ package strategy;/*
 import factory.Book;
 import java.util.List;
 
-// Strategy Pattern
 public interface SearchStrategy {
-    List<Book> search(List<Book> books, String keyword);
+    List<Book> search(List<Book> books, String query);
 }

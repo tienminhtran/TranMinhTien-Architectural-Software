@@ -6,14 +6,17 @@ package factory;/*
  * @nameProject: Project_Architectural_Software
  */
 
-public abstract class Book {
-    protected String title;
-    protected String author;
 
-    public Book(String title, String author) {
+public abstract class Book {
+    public String title;
+    protected String author;
+    protected String genre;
+
+    public Book(String title, String author, String genre) {
         this.title = title;
         this.author = author;
+        this.genre = genre;
     }
 
-    public abstract void displayInfo();
+    public abstract void display();
 }

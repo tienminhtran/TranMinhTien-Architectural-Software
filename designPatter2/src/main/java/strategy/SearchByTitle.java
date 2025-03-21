@@ -10,11 +10,12 @@ import factory.Book;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 public class SearchByTitle implements SearchStrategy {
     @Override
-    public List<Book> search(List<Book> books, String keyword) {
+    public List<Book> search(List<Book> books, String query) {
         return books.stream()
-                .filter(book -> book.title.contains(keyword))
+                .filter(book -> book.title.equalsIgnoreCase(query))
                 .collect(Collectors.toList());
     }
 }
