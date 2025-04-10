@@ -1,0 +1,9 @@
+services:
+  nodejs-app:
+    build: ./nodejs-dockercompose 
+    container_name: nodejs_container
+    ports:
+     - "3000:3000"
+    command: ["node", "index.js"]
+
+       
