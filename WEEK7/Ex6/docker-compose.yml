@@ -1,0 +1,27 @@
+services:
+  mysql:
+    image: mysql:8.0 #chi dinh image su dung
+    environment:
+      MYSQL_USER: user
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: wordpress
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+
+  wordpress:
+    image: wordpress
+    container_name: wordpress
+    depends_on:
+      - mysql
+    environment:
+      WORDPRESS_DB_HOST: mysql:3306
+      WORDPRESS_DB_USER: user
+      WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DB_NAME: wordpress
+    ports:
+      - "8080:80"
+
+
+   
+       
