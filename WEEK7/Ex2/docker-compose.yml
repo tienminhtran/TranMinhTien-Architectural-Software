@@ -1,0 +1,11 @@
+services:
+  mysql:
+    image: mysql:8.0 #chi dinh image su dung 
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: user
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: mydb
+    ports:
+      - "3306:3306"
+       
