@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+    flask1:
+        build: .
+        container_name: flask1
+        networks:
+            - mynet
+
+    flask2:
+        build: .
+        container_name: flask2
+        networks:
+            - mynet
+
+    nginx:
+        image: nginx:latest
+        container_name: nginx-lb
+        ports:
+            - "8080:80"
+        volumes:
+            - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+        depends_on:
+            - flask1
+            - flask2
+        networks:
+            - mynet
+
+networks:
+    mynet:
+        driver: bridge
