@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+    mysql:
+        image: mysql:5.7
+        container_name: mysql-volume-demo
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: rootpass
+            MYSQL_DATABASE: testdb
+            MYSQL_USER: demo
+            MYSQL_PASSWORD: demopass
+        ports:
+            - "3306:3306"
+        volumes:
+            - mysql_data:/var/lib/mysql # Gắn volume để lưu trữ dữ liệu
+
+volumes:
+    mysql_data:
