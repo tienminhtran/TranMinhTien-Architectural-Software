@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+    mongo:
+        image: mongo:4.4
+        container_name: mongo-db
+        ports:
+            - "27017:27017"
+        volumes:
+            - mongo_data:/data/db
+        healthcheck:
+            test: ["CMD", "mongo", "--eval", "db.adminCommand('ping') "]
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+    node-app:
+        build: .
+        container_name: node-app
+        depends_on:
+            mongo:
+                condition: service_healthy
+        ports:
+            - "3000:3000"
+
+volumes:
+    mongo_data:
