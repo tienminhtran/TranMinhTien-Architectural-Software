@@ -2,40 +2,16 @@ spring:
   application:
     name: product-service
   datasource:
-    url: jdbc:mariadb://localhost:3306/microservice_products?createDatabaseIfNotExist=true
-    username: root
-    password: root
+    url: jdbc:postgresql://localhost:5433/productdb
+    username: postgres
+    password: postgres
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-  cloud:
-    discovery:
-      enabled: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
 server:
-  port: 8082
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-
-springdoc:
-  api-docs:
-    enabled: true
-  swagger-ui:
-    enabled: true
-    path: /index.html
-
-logging:
-  level:
-    org:
-      springframework:
-        web: DEBUG
-        security: DEBUG
-        security.web: DEBUG
-        security.authentication: DEBUG
-        security.authorization: DEBUG
-        security.config: DEBUG
-
+  port: 8081
