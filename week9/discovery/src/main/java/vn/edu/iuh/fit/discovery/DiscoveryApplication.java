@@ -1,17 +1,19 @@
-package vn.edu.iuh.fit.productservice;
+package vn.edu.iuh.fit.discovery;
+
 /*
  * @description:
  * @author: Tien Minh Tran
- * @date: 4/21/2025
+ * @date: 4/25/2025
  */
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProductServiceApplication {
+@EnableEurekaServer
+public class DiscoveryApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProductServiceApplication.class, args);
+        SpringApplication.run(DiscoveryApplication.class, args);
     }
-
 }

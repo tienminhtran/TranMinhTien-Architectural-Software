@@ -1,5 +1,9 @@
 package vn.edu.iuh.fit.productservice.controller;
-
+/*
+ * @description:
+ * @author: Tien Minh Tran
+ * @date: 4/21/2025
+ */
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

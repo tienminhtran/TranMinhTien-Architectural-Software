@@ -1,5 +1,9 @@
 package vn.edu.iuh.fit.productservice.model;
-
+/*
+ * @description:
+ * @author: Tien Minh Tran
+ * @date: 4/21/2025
+ */
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

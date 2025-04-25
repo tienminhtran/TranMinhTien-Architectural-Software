@@ -1,5 +1,9 @@
 package vn.edu.iuh.fit.orderservice.model;
-
+/*
+ * @description:
+ * @author: Tien Minh Tran
+ * @date: 4/21/2025
+ */
 
 import jakarta.persistence.*;
 import lombok.*;
